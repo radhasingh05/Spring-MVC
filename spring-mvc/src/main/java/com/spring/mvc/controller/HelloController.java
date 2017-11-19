@@ -13,7 +13,8 @@ public class HelloController {
 
     @RequestMapping(value={"/hello","/"},method= RequestMethod.GET)
     public ModelAndView printHello(){
-        ModelAndView modelAndView = new ModelAndView("welcome");
+        ModelAndView modelAndView = new ModelAndView("HelloPage");
+        modelAndView.addObject("message","Hi.. everyone");
         return modelAndView;
     }
 
